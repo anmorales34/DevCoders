@@ -7,18 +7,17 @@ dotenv.config();
 const { DB_URI, DB_NAME, JWT_SECRET } = process.env;
 
 //Verificación de Autenticación Por Token
-const getToken = (user) => jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '30 days' });
+const getToken = (user) => jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '30 days' }); //almacenando token desde el user id y la libreria jsonwebtoken
 
 //Creación de Metodo getUserFromToken para las mutaciones que lo requieren
 const getUserFromToken = async (token, db) => {
-  //if (!token) { return null }
-  const tokenData = jwt.verify(token, JWT_SECRET); 
+  if (!token) { return null }
+  const tokenData = jwt.verify(token, JWT_SECRET); //funcion de la libreria jsonwebtoken
   if (!tokenData?.id) {
     return null;
   }
-  return await db.collection('user').findOne({ _id: ObjectId(tokenData.id) }); 
+  return await db.collection('user').findOne({ _id: ObjectId(tokenData.id) });  //busca el usuario con el _id igual al que reresa el ObjectId
 }
-
 
 //Resolvers
 const resolvers = {
@@ -77,6 +76,17 @@ createTaskList: async(root,{title},{db, user})=>{
     console.log("Tarea Creada Correctamente") 
     const result= await db.collection("TaskList").insertOne(newTaskList); 
     return newTaskList 
+},
+createProject: async(root,{input},{db, user})=>{    
+  if(!user){console.log("No esta autenticado, por favor inicie sesión.")} 
+  const newProject={  
+      ...input,
+      userIds:[user._id], 
+      userNames: [user.nombre] 
+  }
+  console.log("Tarea Creada Correctamente") 
+  const result= await db.collection("projects").insertOne(newProject); 
+  return  newProject
 },
 
 updateTaskList : async(_, {id, title}, {db, user}) =>{   
@@ -182,7 +192,7 @@ TaskList: {
   },
 
 
-//Parametros inmutables del user
+//Parametros inmutables del toDo
 ToDo:{
   id:(root)=>{
     return root._id;},
@@ -235,16 +245,7 @@ start();  //Arrancamos!
       rol: String!
   } 
   
-  type proyectos{
-      id: ID!
-      nombre: String!
-      objGenerales: String!
-      objEspecicos: String!
-      prespuesto: String!
-      fechain: String!
-      fechafi: String!
-      user:[user!]!
-  }
+
   
   type Mutation{
     signUp(input:SignUpInput):AuthUser!
@@ -255,6 +256,7 @@ start();  //Arrancamos!
     addUserToTaskList(taskListId: ID!, userId: ID!): TaskList
     createToDo(content:String!, taskListId:ID!):ToDo!
     updateToDo(id:ID!,content:String, isCompleted:Boolean):ToDo!
+    createProject(input:projectInput):proyectos!
   }
   input SignUpInput{
     mail: String!
@@ -284,5 +286,17 @@ type ToDo{
     content: String!
     isCompleted: Boolean!
     taskList: TaskList!
+}
+
+input projectInput{
+  title: String!
+  objGenerales: String!
+  objEspecicos: String!
+  prespuesto: String!
+  fechain: String!
+  fechafi: String!
+}
+type proyectos{
+  user:[user]
 }
   `;
