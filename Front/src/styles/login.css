@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Login page, welcome page*/
+
+.login-page {
+  background-image: linear-gradient(to top, #adadad, rgb(230, 230, 230));
+  height: 250vh;
+  font-family: "Dosis";
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
+}
+
+.marketing-tit {
+  color: #05353d;
+  font-size: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: #0c8599;
+}
+
+.logo-title {
+  font-size: 64px;
+}
+
+.welcome {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 54px;
+}
+
+.welcome-txt > h1 {
+  color: #06434d;
+  font-size: 45px;
+}
+
+.welcome-txt {
+  width: 670px;
+  padding: 64px;
+}
+
+.welcome-txt > p {
+  margin-top: 36px;
+  font-size: 28px;
+  color: #343a40;
+}
+
+.welcome-img {
+  background-image: url(../media/mainpage.png);
+  width: 700px;
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  transform: perspective(1500px);
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 10px 10px 30px #09243380;
+}
+/*
+.welcome-img:hover {
+  transform: rotateY(0deg) skew(0deg);
+}
+*/
+
+.pic-1 {
+  background-image: url(../media/project2.jpg);
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+
+  box-shadow: 3px 3px 30px #09243380;
+}
+
+.pic-2 {
+  background-image: url(../media/project3.jpg);
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  box-shadow: 3px 3px 30px #09243380;
+}
+
+.pic-3 {
+  background-image: url(../media/project4.jpg);
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+
+  box-shadow: 3px 3px 30px #09243380;
+}
+
+.pic-4 {
+  background-image: url(../media/project1.jpg);
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  margin-left: auto;
+  box-shadow: 3px 3px 30px #09243380;
+}
+
+.pic-5 {
+  background-image: url(../media/project5.jpg);
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  margin-left: auto;
+  box-shadow: 3px 3px 30px #09243380;
+}
+
+.pic-6 {
+  background-image: url(../media/project6.jpg);
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  margin-left: auto;
+  box-shadow: 3px 3px 30px #09243380;
+}
+
+/*register form*/
+
+.register-form {
+  background-color: #8f8f8f;
+  width: 500px;
+  height: 700px;
+}
+
+.galery-pic {
+  display: flex;
+
+  align-items: center;
+
+  padding: 48px;
+}
+
+.galery {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.registro-form {
+  width: 500px;
+  background-color: #fff;
+  color: #16171f;
+  height: 700px;
+  font-size: 20px;
+  padding: 18px 24px;
+  font-family: "Dosis";
+  margin-bottom: 30px;
+}
+
+.registro-tit {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.recuerdame-check {
+  width: 15px;
+  height: 15px;
+  margin-left: 0;
+  margin-right: 6px;
+}
+
+.recuerdame-label {
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+
+  justify-content: center;
+}
+
+#input-regist {
+  margin-left: 0;
+  height: 30px;
+
+  margin-bottom: 6px;
+  width: 400px;
+  padding: 8px;
+}
+
+.registro-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.psw-label {
+  width: 500px;
+}
+
+.politica {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.cancelbtn {
+  width: 200px;
+}
+
+.signbtn {
+  width: 200px;
+  padding: 16px;
+}
+
+.registro-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-registro {
+  background-color: #06434d;
+  color: #16171f;
+  padding: 10px 16px;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+/* footer */
+
+.footer {
+  height: 320px;
+  display: flex;
+  font-family: "Roboto";
+  justify-content: space-between;
+}
+
+.logo-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.logof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  letter-spacing: 4px;
+}
+
+.documentos {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media {
+  display: flex;
+  width: 75%;
+  background-color: #021b1f;
+  color: rgb(221, 220, 220);
+}
+
+.documentacion {
+  background-color: #085d6b;
+  height: 50%;
+  width: 500px;
+  color: rgb(198, 205, 211);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.help {
+  background-color: #06434d;
+  height: 50%;
+  width: 500px;
+  color: rgb(187, 193, 197);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.help > p {
+  font-size: 12px;
+}
+
+.documentacion > p {
+  font-size: 12px;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding: 48px;
+}
+
+/* login bar */
+
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #05353d;
+}
+
+.menu-login {
+  color: aliceblue;
+  font-family: "Dosis";
+}
+
+.forgot {
+  color: #0c8599;
+  text-decoration: none;
+}
+
+.logo {
+  color: rgb(231, 230, 230);
+  padding: 24px;
+  margin-left: 24px;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  height: 100px;
+  margin-top: 15px;
+  width: 450px;
+  margin-right: 10px;
+}
+
+button {
+  width: 200px;
+  background-color: #0a6a7a;
+  padding: 6px;
+  border: none;
+}
+
+.input {
+  width: 200px;
+  padding: 6px;
+}
+
+#btn-login {
+  grid-column: -2;
+}
+
+.link-login {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}

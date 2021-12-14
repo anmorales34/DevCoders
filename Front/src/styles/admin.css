@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.general-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 10vh 10vh 1fr;
+}
+
+/*SIDEBAR*/
+
+.side-bar {
+  background-color: #04282e;
+  height: 100vh;
+}
+
+.nav-logo {
+  display: flex;
+  color: #dbdbdb;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  font-family: "Dosis";
+  gap: 12px;
+}
+
+.nav-options,
+.settings {
+  color: #dbdbdb;
+  margin: 0 24px;
+  font-size: 18px;
+  font-family: "Dosis";
+}
+
+.sidebar-item {
+  margin: 12px 0px;
+}
+
+.profile-item {
+  color: #dbdbdb;
+  margin: 0 24px;
+  font-size: 18px;
+  font-family: "Dosis";
+}
+
+.sidebar-list {
+  border-bottom: #dbdbdb solid 1px;
+  margin-bottom: 15px;
+}
+
+.sidebar-interior {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+li:last-child {
+  margin-bottom: 24px;
+}
+
+.perfil {
+  margin-top: 200px;
+}
+
+/* CONTAINER */
+
+.container-admin {
+  background-color: #fff;
+  height: 100vh;
+  overflow: auto;
+}
+
+.menu-bar {
+  border-bottom: rgb(124, 124, 124) solid 3px;
+  border-top: 0px;
+}
+
+.header-bar {
+  border-top: 0px;
+}
