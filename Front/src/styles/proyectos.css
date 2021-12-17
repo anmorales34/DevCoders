@@ -1,0 +1,408 @@
+/*Table*/
+
+table {
+  width: 95%;
+  margin-top: 30px;
+  padding: 50px;
+  /*border: 1px solid #343a40;*/
+  border-collapse: collapse;
+  font-size: 18px;
+  font-family: "Roboto";
+  letter-spacing: 0.5px;
+  margin-left: 2.5%;
+}
+
+th,
+td {
+  /*border: 1px solid #343a40;*/
+  padding: 16px 34px;
+  text-align: center;
+}
+
+form > th,
+td {
+  padding: 8px 17px;
+  height: 60px;
+}
+
+thead th {
+  background-color: #04282e;
+  color: #fff;
+  width: 18%;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #cee7eb;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.id {
+  width: 250px;
+}
+
+.table-striped {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.sell-report {
+  grid-column: 2 / -1;
+}
+
+.top-table-sell {
+  display: flex;
+  padding: 0px 40px;
+  gap: 10px;
+  align-items: center;
+}
+
+#reporte-title {
+  padding: 36px;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.new-sell {
+  margin-left: auto;
+
+  align-items: center;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-family: "Montserrat";
+  font-weight: 100;
+  text-decoration: none;
+  background-color: rgb(209, 156, 22);
+  border: none;
+  cursor: pointer;
+  color: #0b233f;
+  padding: 12px 18px;
+  border-radius: 1px;
+  box-shadow: 4px 4px 12px #0b0c0e91;
+}
+
+.new-sell-link {
+  text-decoration: none;
+  color: #0b233f;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.new-pdf {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.search-bar-sell {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 1px;
+  box-shadow: 4px 4px 12px #0b0c0e91;
+}
+
+.search-bar-sell > input {
+  border: 0px;
+  outline: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: goldenrod;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px goldenrod;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/*PAGINATION*/
+
+.pagination {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #04282e;
+  width: 48px;
+  height: 48px;
+  color: #d3dce6;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  stroke: goldenrod;
+}
+
+.btn:hover {
+  background-color: goldenrod;
+}
+
+.btn:hover .btn-icon {
+  stroke: #04282e;
+}
+
+.num {
+  width: 48px;
+  height: 48px;
+  background-color: #ccc;
+  border: none;
+}
+
+.num:link,
+.num:visited {
+  width: 48px;
+  height: 48px;
+
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #343a40;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.num:hover,
+.num:active,
+.num.num-3 {
+  background-color: goldenrod;
+  color: #04282e;
+}
+
+/*Product REPORT*/
+
+.stock-input {
+  width: 40px;
+}
+
+.description-box {
+  overflow-y: scroll;
+  height: 100px;
+}
+
+img {
+  width: 120px;
+}
+
+#aprobar {
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+}
+
+.proyecto-header {
+  display: flex;
+  border-top: 0px;
+  margin: 0px 24px;
+  margin-top: 15px;
+  font-size: 22px;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.header-bar {
+  display: flex;
+  border-top: 0px;
+  margin: 0px 24px;
+  margin-top: 15px;
+  font-size: 22px;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.btn-proyect {
+  background-color: #04282e;
+  color: #ccc;
+  margin-right: 12px;
+  padding: 2px 20px;
+  border: none;
+  border-radius: 0.3cm;
+}
+
+.btn-proyect:hover {
+  background-color: goldenrod;
+  color: #0b233f;
+  cursor: pointer;
+}
+
+.btn-active {
+  background-color: #fff;
+  border: none;
+  font-family: "Dosis";
+  font-size: 22px;
+  padding: 8px;
+  border-bottom: #fff solid 4px;
+}
+
+.btn-active:hover {
+  border-bottom: #04282e solid 4px;
+}
+
+.btn-off {
+  background-color: #fff;
+  border: none;
+}
+
+.link-menu {
+  text-decoration: none;
+  color: #04282e;
+}
+
+.presupuesto {
+  width: 8%;
+}
+
+.fase {
+  width: 15%;
+}
+
+.lider {
+  width: 100px;
+}
+
+/*EQUIPOS*/
+
+.flip-card {
+  background-color: transparent;
+
+  width: 250px;
+  height: 350px;
+
+  perspective: 800px;
+}
+
+img {
+  width: 350px;
+  height: fit-content;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  transform-style: preserve-3d;
+  box-shadow: 10px 10px 30px #09243380;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 550px);
+  row-gap: 50px;
+  column-gap: 50px;
+}
+
+.flip-card:hover .cards {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-image: linear-gradient(to bottom, #021520, #096090);
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  color: #f1f1f1;
+  justify-content: space-between;
+}
+
+.profile-head {
+  width: 100%;
+  height: 80px;
+  background-image: linear-gradient(to bottom, #ffd89b, #ffd89b);
+}
+
+.card-back {
+  background-color: #053550;
+  color: white;
+  transform: rotateY(180deg);
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px, 10px, 10px, #021520;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.customer-information {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 100;
+}

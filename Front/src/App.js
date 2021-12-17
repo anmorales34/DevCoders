@@ -4,13 +4,16 @@ import Index from "./pages/administrador/Index";
 import PerfilAdmin from "./pages/administrador/perfil";
 import MaestroUsuarios from "./pages/administrador/maestroUsuarios";
 import MaestroProyecto from "./pages/administrador/maestroProyecto";
+import ProyectoAprob from "./pages/administrador/proyectoAprob";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LayoutLogin from "./layouts/layoutLogin";
-
+import LayoutProyect from "./layouts/layoutProyect";
 import LayoutAdmin from "./layouts/layoutAdmin";
 import MaestroEquipos from "./pages/administrador/maestroEquipos";
 import "./styles/login.css";
 import "./styles/admin.css";
+import "./styles/proyectos.css";
 
 const App = () => {
   return (
@@ -22,6 +25,7 @@ const App = () => {
               "/administrador",
               "/administrador/equipos",
               "/administrador/proyectos",
+              "/administrador/proyectos-aprob",
               "/administrador/usuarios",
               "/administrador/perfil",
             ]}
@@ -36,6 +40,9 @@ const App = () => {
                 </Route>
                 <Route path="/administrador/proyectos">
                   <MaestroProyecto />
+                </Route>
+                <Route path="/administrador/proyectos-aprob">
+                  <ProyectoAprob />
                 </Route>
                 <Route path="/administrador/equipos">
                   <MaestroEquipos />

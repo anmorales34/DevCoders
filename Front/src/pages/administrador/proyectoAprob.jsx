@@ -2,7 +2,7 @@ import React from "react";
 import HeaderBar from "../../components/headerBar";
 import MenuBar from "../../components/menuBar";
 
-const MaestroProyecto = () => {
+const proyectoAprob = () => {
   return (
     <div>
       <HeaderBar
@@ -23,19 +23,19 @@ const MaestroProyecto = () => {
         <thead>
           <tr>
             <th className="id">Proyecto ID</th>
-            <th className="id">Fecha</th>
+
             <th>Título</th>
-            <th>Líder</th>
-            <th>Equipo</th>
-            <th>Presupuesto</th>
-            <th>Activo</th>
-            <th>Aprobar</th>
+            <th className="lider">Líder</th>
+            <th>Objetivos</th>
+            <th className="presupuesto">Presupuesto</th>
+            <th>Avance</th>
+            <th className="fase">Fase de proyecto</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>71728</td>
-            <td>30/09/2021</td>
+
             <td>Desarrollo de aplicación de gestión de proyectos</td>
             <td>Luis Alvarez</td>
             <td>
@@ -48,20 +48,23 @@ const MaestroProyecto = () => {
             </td>
             <td>13.240.000</td>
             <td>
-              <label className="switch">
-                <input type="checkbox"></input>
-                <span className="slider"></span>
-              </label>
+              <div className="progress">
+                <div className="skills proj1">32%</div>
+              </div>
             </td>
             <td>
-              <label className="checkbox">
-                <input type="checkbox" id="aprobar" />
-              </label>
+              <select name="Fase" className="fase-proy">
+                <option value="0">Fase</option>
+                <optgroup>
+                  <option value="1">En desarrollo</option>
+                  <option value="2">Terminado</option>
+                </optgroup>
+              </select>
             </td>
           </tr>
           <tr>
             <td>74562</td>
-            <td>12/09/2021</td>
+
             <td>Desarrollo de BackEnd y servidores</td>
             <td>Carlos Ardila</td>
             <td>
@@ -74,20 +77,23 @@ const MaestroProyecto = () => {
             </td>
             <td>15.840.000</td>
             <td>
-              <label className="switch">
-                <input type="checkbox"></input>
-                <span className="slider"></span>
-              </label>
+              <div className="progress">
+                <div className="skills proj3">64%</div>
+              </div>
             </td>
             <td>
-              <label className="checkbox">
-                <input type="checkbox" id="aprobar" />
-              </label>
+              <select name="Fase" className="fase-proy">
+                <option value="0">Fase</option>
+                <optgroup>
+                  <option value="1">En desarrollo</option>
+                  <option value="2">Terminado</option>
+                </optgroup>
+              </select>
             </td>
           </tr>
           <tr>
             <td>65412</td>
-            <td>10/08/2021</td>
+
             <td>Nuevas tecnologías de la comunicación</td>
             <td>Andrea Rocha</td>
             <td>
@@ -100,15 +106,18 @@ const MaestroProyecto = () => {
             </td>
             <td>9.440.000</td>
             <td>
-              <label className="switch">
-                <input type="checkbox"></input>
-                <span className="slider"></span>
-              </label>
+              <div className="progress">
+                <div className="skills proj4">91%</div>
+              </div>
             </td>
             <td>
-              <label className="checkbox">
-                <input type="checkbox" id="aprobar" />
-              </label>
+              <select name="Fase" className="fase-proy">
+                <option value="0">Fase</option>
+                <optgroup>
+                  <option value="1">En desarrollo</option>
+                  <option value="2">Terminado</option>
+                </optgroup>
+              </select>
             </td>
           </tr>
         </tbody>
@@ -135,4 +144,4 @@ const MaestroProyecto = () => {
   );
 };
 
-export default MaestroProyecto;
+export default proyectoAprob;

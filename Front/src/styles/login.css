@@ -8,7 +8,7 @@
 
 .login-page {
   background-image: linear-gradient(to top, #adadad, rgb(230, 230, 230));
-  height: 250vh;
+  height: 230vh;
   font-family: "Dosis";
   letter-spacing: 0.5px;
   display: flex;
@@ -41,7 +41,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 54px;
 }
 
 .welcome-txt > h1 {
@@ -135,7 +134,7 @@
 .register-form {
   background-color: #8f8f8f;
   width: 500px;
-  height: 700px;
+  height: 720px;
 }
 
 .galery-pic {
@@ -157,7 +156,7 @@
   width: 500px;
   background-color: #fff;
   color: #16171f;
-  height: 700px;
+  height: 720px;
   font-size: 20px;
   padding: 18px 24px;
   font-family: "Dosis";
@@ -218,6 +217,16 @@
 .signbtn {
   width: 200px;
   padding: 16px;
+  background-color: #0a6a7a;
+  color: #fff;
+  font-family: "Dosis";
+  font-size: 18px;
+  border: none;
+  margin-top: 12px;
+}
+
+.signbtn:hover {
+  background-color: #06434d;
 }
 
 .registro-btn {
@@ -346,7 +355,7 @@
   margin-right: 10px;
 }
 
-button {
+#btn-login {
   width: 200px;
   background-color: #0a6a7a;
   padding: 6px;
@@ -367,4 +376,19 @@ button {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
+}
+
+.github {
+  padding: 12px;
+  width: 200px;
+  background-color: transparent;
+  color: #adadad;
+  border: none;
+  font-size: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.github:hover {
+  color: #fff;
 }
